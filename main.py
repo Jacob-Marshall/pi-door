@@ -11,7 +11,7 @@ from datetime import datetime
 door = Button(26)
 now = datetime.now()
 current_time = now.strftime('%H:%M:%S')
-door_open_time = '\nYour door was opened at', current_time
+door_open_time = '\nYour door was opened at', current_time.encode()
 
 # open and read the file after the appending:
 
