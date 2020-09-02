@@ -1,12 +1,13 @@
 # Inport modules
 from gpiozero import Button
 from time import sleep
+from datetime import datetime
 
 door = Button(26)
+now = datetime.now()
+current_time = now.strftime("%H:%M:%S")
 
 while True:
     if door.is_pressed:
-        print("Open")
-    else:
-        print("Closed")
+        print("Your door was opened at", current_time)
     sleep(1)
