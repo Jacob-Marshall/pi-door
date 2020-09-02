@@ -11,6 +11,7 @@ from datetime import datetime
 door = Button(26)
 now = datetime.now()
 current_time = now.strftime('%H:%M:%S')
+door_open_time = '\nYour door was opened at', current_time
 
 # open and read the file after the appending:
 
@@ -24,6 +25,6 @@ while True:
         # File handling
         f = open('log.txt', 'w')
         f = open('log.txt', 'a')
-        f.write('Your door was opened at', current_time)
+        f.write(door_open_time)
         f.close()
     sleep(1)
